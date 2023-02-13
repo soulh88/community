@@ -1,0 +1,25 @@
+package com.soulh88.community.util;
+
+import com.soulh88.community.entity.User;
+import org.springframework.stereotype.Component;
+
+/**
+ * 持有用户信息，用于代替session对象
+ * @author Soulh88
+ */
+@Component
+public class HostHolder {
+    private ThreadLocal<User> users = new ThreadLocal<>();
+
+    public void setUser(User user) {
+        users.set(user);
+    }
+
+    public User getUser() {
+        return users.get();
+    }
+
+    public void clear() {
+        users.remove();
+    }
+}
