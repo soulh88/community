@@ -14,6 +14,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Date;
 
+/**
+ * @author Soulh88
+ */
 @Component
 public class LoginTicketInterceptor implements HandlerInterceptor {
     @Autowired
